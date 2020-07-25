@@ -109,15 +109,15 @@ client.on("ready", () => {
   ///////////////////////////////////Koniec Pon///////////////////
   ////////////////////////////////Wtorek/////////////////////////
   //////////////////////////Karada/////////////////////////////////
-  const KaradaMsg5 = new MessageEmbed()
+  const KaradaMsg12 = new MessageEmbed()
     .setColor("RANDOM")
     .setAuthor("Project-helius", "https://i.imgur.com/dQcXxf1.png")
     .setImage("https://i.imgur.com/Edj0nml.png")
     .setTitle("Halo Halo Boss sie respi za 15 min!??! ===> Karada");
   ///////////////////////funkcja////////////////////
-  var Karada5 = schedule.scheduleJob("00 00 * * 2", function () {
+  var Karada12 = schedule.scheduleJob("00 00 * * 2", function () {
     const channel = client.channels.cache.get(ChanelId);
-    channel.send(KaradaMsg5);
+    channel.send(KaradaMsg12);
     message.delete({ timeout: 800000 });
   });
   //////////////////////////////Kutum//////////////////////////
@@ -181,15 +181,15 @@ client.on("ready", () => {
     message.delete({ timeout: 800000 });
   });
   //////////////////////////Karada/////////////////////////////////
-  const KaradaMsg4 = new MessageEmbed()
+  const KaradaMsg16 = new MessageEmbed()
     .setColor("RANDOM")
     .setAuthor("Project-helius", "https://i.imgur.com/dQcXxf1.png")
     .setImage("https://i.imgur.com/Edj0nml.png")
     .setTitle("Halo Halo Boss sie respi za 15 min!??! ===> Karada");
   ///////////////////////funkcja////////////////////
-  var Karada4 = schedule.scheduleJob("45 18 * * 2", function () {
+  var Karada16 = schedule.scheduleJob("45 18 * * 2", function () {
     const channel = client.channels.cache.get(ChanelId);
-    channel.send(KaradaMsg4);
+    channel.send(KaradaMsg16);
     message.delete({ timeout: 800000 });
   });
   /////////////////////////Garmoth//////////////////////////////
@@ -219,15 +219,15 @@ client.on("ready", () => {
     message.delete({ timeout: 800000 });
   });
   //////////////////////////Karada/////////////////////////////////
-  const KaradaMsg5 = new MessageEmbed()
+  const KaradaMsg14 = new MessageEmbed()
     .setColor("RANDOM")
     .setAuthor("Project-helius", "https://i.imgur.com/dQcXxf1.png")
     .setImage("https://i.imgur.com/Edj0nml.png")
     .setTitle("Halo Halo Boss sie respi za 15 min!??! ===> Karada");
   ///////////////////////funkcja////////////////////
-  var Karada5 = schedule.scheduleJob("45 01 * * 3", function () {
+  var Karada14 = schedule.scheduleJob("45 01 * * 3", function () {
     const channel = client.channels.cache.get(ChanelId);
-    channel.send(KaradaMsg5);
+    channel.send(KaradaMsg14);
     message.delete({ timeout: 800000 });
   });
   /////////////////////////Kzarka//////////////////////////////
