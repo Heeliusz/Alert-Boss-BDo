@@ -1,5 +1,5 @@
 const { prefix, Token, ChanelId, RoleAdm, guildID } = require("./confing.json");
-var schedule = require("node-schedule");
+var schedule = require("node-cron");
 const { Client, MessageEmbed, User, Message, CategoryChannel } = require("discord.js");
 const client = new Client({ partials: ["MESSAGE", "REACTION"] });
 let jest = false;
@@ -14,10 +14,10 @@ client.on("ready", () => {
     .setImage("https://i.imgur.com/DWDbvFH.png")
     .setTitle("Halo Halo Boss sie respi za 15 min!??! ===> Karada , Kutum");
   /////////////////////////////funkcja///////////////////////////
-  // var test = schedule.scheduleJob("39 15 * * 6", function () {
-  //   const channel = client.channels.cache.get(ChanelId);
-  //   channel.send(test2);
-  // });
+  var test = schedule.schedule("39 15 * * 6", function () {
+    const channel = client.channels.cache.get(ChanelId);
+    channel.send(test2);
+  });
   //////////////////////Poniedziałek/////////////////////
   //////////////////////Karada , Kutum//////////////////
   const KaradaKutumMsg = new MessageEmbed()
@@ -26,7 +26,7 @@ client.on("ready", () => {
     .setImage("https://i.imgur.com/DWDbvFH.png")
     .setTitle("Halo Halo Boss sie respi za 15 min!??! ===> Karada , Kutum");
   /////////////////////////////funkcja///////////////////////////
-  var KaradaKutum = schedule.scheduleJob("00 00 * * 1", function () {
+  var KaradaKutum = schedule.schedule("00 00 * * 1", function () {
     const channel = client.channels.cache.get(ChanelId);
     channel.send(KaradaKutumMsg);
   });
@@ -37,7 +37,7 @@ client.on("ready", () => {
     .setImage("https://i.imgur.com/Edj0nml.png")
     .setTitle("Halo Halo Boss sie respi za 15 min!??! ===> Karada");
   ///////////////////////funkcja////////////////////
-  var Karada2 = schedule.scheduleJob("45 01 * * 1", function () {
+  var Karada2 = schedule.schedule("45 01 * * 1", function () {
     const channel = client.channels.cache.get(ChanelId);
     channel.send(KaradaMsg2);
   });
@@ -48,7 +48,7 @@ client.on("ready", () => {
     .setImage("https://i.imgur.com/Szkk0pU.png")
     .setTitle("Halo Halo Boss sie respi za 15 min!??! ===> Kzarka");
   /////////////////////////////funkcja////////////////////
-  var Kzarka4 = schedule.scheduleJob("45 04 * * 1", function () {
+  var Kzarka4 = schedule.schedule("45 04 * * 1", function () {
     const channel = client.channels.cache.get(ChanelId);
     channel.send(KzarkaMsg4);
   });
@@ -60,7 +60,7 @@ client.on("ready", () => {
     .setImage("https://i.imgur.com/Szkk0pU.png")
     .setTitle("Halo Halo Boss sie respi za 15 min!??! ===> Kzarka");
   /////////////////////////////funkcja////////////////////
-  var Kzarka5 = schedule.scheduleJob("45 08 * * 1", function () {
+  var Kzarka5 = schedule.schedule("45 08 * * 1", function () {
     const channel = client.channels.cache.get(ChanelId);
     channel.send(KzarkaMsg5);
   });
@@ -71,7 +71,7 @@ client.on("ready", () => {
     .setImage("https://i.imgur.com/cmq8CNP.png")
     .setTitle("Halo Halo Boss sie respi za 15 min!??! ===> Offin");
   /////////////////////////funkcja////////////////////////////
-  var Offin3 = schedule.scheduleJob("45 11 * * 1", function () {
+  var Offin3 = schedule.schedule("45 11 * * 1", function () {
     const channel = client.channels.cache.get(ChanelId);
     channel.send(OffinMsg3);
   });
@@ -82,7 +82,7 @@ client.on("ready", () => {
     .setImage("https://i.imgur.com/umi4tP6.png")
     .setTitle("Halo Halo Boss sie respi za 15 min!??! ===> Kutum");
   ///////////////////////////funkcja//////////////////////
-  var Kutum4 = schedule.scheduleJob("45 15 * * 1", function () {
+  var Kutum4 = schedule.schedule("45 15 * * 1", function () {
     const channel = client.channels.cache.get(ChanelId);
     channel.send(KutumMsg4);
   });
@@ -93,7 +93,7 @@ client.on("ready", () => {
     .setImage("https://i.imgur.com/cMJDCj1.png")
     .setTitle("Halo Halo Boss sie respi za 15 min!??! ===> Nouver");
   /////////////////////////////funkcja///////////////////////////
-  var Nouver6 = schedule.scheduleJob("45 18 * * 1", function () {
+  var Nouver6 = schedule.schedule("45 18 * * 1", function () {
     const channel = client.channels.cache.get(ChanelId);
     channel.send(NouverMsg6);
   });
@@ -104,7 +104,7 @@ client.on("ready", () => {
     .setImage("https://i.imgur.com/Szkk0pU.png")
     .setTitle("Halo Halo Boss sie respi za 15 min!??! ===> Kzarka");
   /////////////////////////////funkcja////////////////////
-  var Kzarka6 = schedule.scheduleJob("00 22 * * 1", function () {
+  var Kzarka6 = schedule.schedule("00 22 * * 1", function () {
     const channel = client.channels.cache.get(ChanelId);
     channel.send(KzarkaMsg6);
   });
@@ -117,7 +117,7 @@ client.on("ready", () => {
     .setImage("https://i.imgur.com/Edj0nml.png")
     .setTitle("Halo Halo Boss sie respi za 15 min!??! ===> Karada");
   ///////////////////////funkcja////////////////////
-  var Karada12 = schedule.scheduleJob("00 00 * * 2", function () {
+  var Karada12 = schedule.schedule("00 00 * * 2", function () {
     const channel = client.channels.cache.get(ChanelId);
     channel.send(KaradaMsg12);
   });
@@ -128,7 +128,7 @@ client.on("ready", () => {
     .setImage("https://i.imgur.com/umi4tP6.png")
     .setTitle("Halo Halo Boss sie respi za 15 min!??! ===> Kutum");
   ///////////////////////////funkcja//////////////////////
-  var Kutum5 = schedule.scheduleJob("45 01 * * 2", function () {
+  var Kutum5 = schedule.schedule("45 01 * * 2", function () {
     const channel = client.channels.cache.get(ChanelId);
     channel.send(KutumMsg5);
   });
@@ -139,7 +139,7 @@ client.on("ready", () => {
     .setImage("https://i.imgur.com/Szkk0pU.png")
     .setTitle("Halo Halo Boss sie respi za 15 min!??! ===> Kzarka");
   /////////////////////////////funkcja////////////////////
-  var Kzarka7 = schedule.scheduleJob("45 04 * * 2", function () {
+  var Kzarka7 = schedule.schedule("45 04 * * 2", function () {
     const channel = client.channels.cache.get(ChanelId);
     channel.send(KzarkaMsg7);
   });
@@ -150,7 +150,7 @@ client.on("ready", () => {
     .setImage("https://i.imgur.com/cMJDCj1.png")
     .setTitle("Halo Halo Boss sie respi za 15 min!??! ===> Nouver");
   /////////////////////////////funkcja///////////////////////////
-  var Nouver7 = schedule.scheduleJob("45 08 * * 2", function () {
+  var Nouver7 = schedule.schedule("45 08 * * 2", function () {
     const channel = client.channels.cache.get(ChanelId);
     channel.send(NouverMsg7);
   });
@@ -161,7 +161,7 @@ client.on("ready", () => {
     .setImage("https://i.imgur.com/umi4tP6.png")
     .setTitle("Halo Halo Boss sie respi za 15 min!??! ===> Kutum");
   ///////////////////////////funkcja//////////////////////
-  var Kutum7 = schedule.scheduleJob("45 11 * * 2", function () {
+  var Kutum7 = schedule.schedule("45 11 * * 2", function () {
     const channel = client.channels.cache.get(ChanelId);
     channel.send(KutumMsg7);
   });
@@ -172,7 +172,7 @@ client.on("ready", () => {
     .setImage("https://i.imgur.com/cMJDCj1.png")
     .setTitle("Halo Halo Boss sie respi za 15 min!??! ===> Nouver");
   /////////////////////////////funkcja///////////////////////////
-  var Nouver8 = schedule.scheduleJob("45 15 * * 2", function () {
+  var Nouver8 = schedule.schedule("45 15 * * 2", function () {
     const channel = client.channels.cache.get(ChanelId);
     channel.send(NouverMsg8);
   });
@@ -183,7 +183,7 @@ client.on("ready", () => {
     .setImage("https://i.imgur.com/Edj0nml.png")
     .setTitle("Halo Halo Boss sie respi za 15 min!??! ===> Karada");
   ///////////////////////funkcja////////////////////
-  var Karada16 = schedule.scheduleJob("45 18 * * 2", function () {
+  var Karada16 = schedule.schedule("45 18 * * 2", function () {
     const channel = client.channels.cache.get(ChanelId);
     channel.send(KaradaMsg16);
   });
@@ -194,7 +194,7 @@ client.on("ready", () => {
     .setImage("https://i.imgur.com/gPTUScx.png")
     .setTitle("Halo Halo Boss sie respi za 15 min!??! ===> Garmoth");
   /////////////////////////////funkcja////////////////////
-  var Garmoth2 = schedule.scheduleJob("00 22 * * 2", function () {
+  var Garmoth2 = schedule.schedule("00 22 * * 2", function () {
     const channel = client.channels.cache.get(ChanelId);
     channel.send(GarmothMsg2);
   });
@@ -207,7 +207,7 @@ client.on("ready", () => {
     .setImage("https://i.imgur.com/tE5bxmI.png")
     .setTitle("Halo Halo Boss sie respi za 15 min!??! ===> Nouver, Kutum");
   /////////////////////funkcja/////////////////////////////
-  var KzarkaKutum = schedule.scheduleJob("00 00 * * 3", function () {
+  var KzarkaKutum = schedule.schedule("00 00 * * 3", function () {
     const channel = client.channels.cache.get(ChanelId);
     channel.send(KzarkaKutumMsg);
   });
@@ -218,7 +218,7 @@ client.on("ready", () => {
     .setImage("https://i.imgur.com/Edj0nml.png")
     .setTitle("Halo Halo Boss sie respi za 15 min!??! ===> Karada");
   ///////////////////////funkcja////////////////////
-  var Karada14 = schedule.scheduleJob("45 01 * * 3", function () {
+  var Karada14 = schedule.schedule("45 01 * * 3", function () {
     const channel = client.channels.cache.get(ChanelId);
     channel.send(KaradaMsg14);
   });
@@ -229,7 +229,7 @@ client.on("ready", () => {
     .setImage("https://i.imgur.com/Szkk0pU.png")
     .setTitle("Halo Halo Boss sie respi za 15 min!??! ===> Kzarka");
   /////////////////////////////funkcja////////////////////
-  var Kzarka9 = schedule.scheduleJob("45 04 * * 3", function () {
+  var Kzarka9 = schedule.schedule("45 04 * * 3", function () {
     const channel = client.channels.cache.get(ChanelId);
     channel.send(KzarkaMsg9);
   });
@@ -240,7 +240,7 @@ client.on("ready", () => {
     .setImage("https://i.imgur.com/Edj0nml.png")
     .setTitle("Halo Halo Boss sie respi za 15 min!??! ===> Karada");
   ///////////////////////funkcja////////////////////
-  var Karada6 = schedule.scheduleJob("45 08 * * 3", function () {
+  var Karada6 = schedule.schedule("45 08 * * 3", function () {
     const channel = client.channels.cache.get(ChanelId);
     channel.send(KaradaMsg6);
   });
@@ -251,7 +251,7 @@ client.on("ready", () => {
     .setImage("https://i.imgur.com/Edj0nml.png")
     .setTitle("Halo Halo Boss sie respi za 15 min!??! ===> Offin,Kutum");
   ///////////////////////funkcja////////////////////
-  var OffinKutum = schedule.scheduleJob("45 15 * * 3", function () {
+  var OffinKutum = schedule.schedule("45 15 * * 3", function () {
     const channel = client.channels.cache.get(ChanelId);
     channel.send(OffinKutumMsg);
   });
@@ -262,7 +262,7 @@ client.on("ready", () => {
     .setImage("https://i.imgur.com/C3X1tu9.png")
     .setTitle("Halo Halo Boss sie respi za 15 min!??! ===> Vell");
   /////////////////////////////funkcja////////////////////
-  var Vell2 = schedule.scheduleJob("45 18 * * 3", function () {
+  var Vell2 = schedule.schedule("45 18 * * 3", function () {
     const channel = client.channels.cache.get(ChanelId);
     channel.send(VellMsg2);
   });
@@ -273,7 +273,7 @@ client.on("ready", () => {
     .setImage("https://i.imgur.com/pqasFj4.png")
     .setTitle("Halo Halo Boss sie respi za 15 min!??! ===> Karada, Kzarka");
   //////////////////////funkcja////////////////////
-  var KAradaKzarka2 = schedule.scheduleJob("00 22 * * 3", function () {
+  var KAradaKzarka2 = schedule.schedule("00 22 * * 3", function () {
     const channel = client.channels.cache.get(ChanelId);
     channel.send(KAradaKzarkaMsg2);
   });
@@ -284,7 +284,7 @@ client.on("ready", () => {
     .setImage("https://i.imgur.com/QfvqMqM.png")
     .setTitle("Halo Halo Boss sie respi za 15 min!??! ===> Quint,Muraka");
   //////////////////////////funkcja///////////////////////////
-  var QuintMuraka2 = schedule.scheduleJob("00 23 * * 3", function () {
+  var QuintMuraka2 = schedule.schedule("00 23 * * 3", function () {
     const channel = client.channels.cache.get(ChanelId);
     channel.send(QuintMurakaMsg2);
   });
@@ -297,7 +297,7 @@ client.on("ready", () => {
     .setImage("https://i.imgur.com/cMJDCj1.png")
     .setTitle("Halo Halo Boss sie respi za 15 min!??! ===> Nouver");
   /////////////////////////////funkcja///////////////////////////
-  var Nouver10 = schedule.scheduleJob("00 00 * * 4", function () {
+  var Nouver10 = schedule.schedule("00 00 * * 4", function () {
     const channel = client.channels.cache.get(ChanelId);
     channel.send(NouverMsg10);
   });
@@ -308,7 +308,7 @@ client.on("ready", () => {
     .setImage("https://i.imgur.com/umi4tP6.png")
     .setTitle("Halo Halo Boss sie respi za 15 min!??! ===> Kutum");
   ///////////////////////////funkcja//////////////////////
-  var Kutum3 = schedule.scheduleJob("45 01 * * 4", function () {
+  var Kutum3 = schedule.schedule("45 01 * * 4", function () {
     const channel = client.channels.cache.get(ChanelId);
     channel.send(KutumMsg3);
   });
@@ -319,7 +319,7 @@ client.on("ready", () => {
     .setImage("https://i.imgur.com/cMJDCj1.png")
     .setTitle("Halo Halo Boss sie respi za 15 min!??! ===> Nouver");
   /////////////////////////////funkcja///////////////////////////
-  var Nouver11 = schedule.scheduleJob("45 04 * * 4", function () {
+  var Nouver11 = schedule.schedule("45 04 * * 4", function () {
     const channel = client.channels.cache.get(ChanelId);
     channel.send(NouverMsg11);
   });
@@ -330,7 +330,7 @@ client.on("ready", () => {
     .setImage("https://i.imgur.com/umi4tP6.png")
     .setTitle("Halo Halo Boss sie respi za 15 min!??! ===> Kutum");
   ///////////////////////////funkcja//////////////////////
-  var Kutum9 = schedule.scheduleJob("45 08 * * 4", function () {
+  var Kutum9 = schedule.schedule("45 08 * * 4", function () {
     const channel = client.channels.cache.get(ChanelId);
     channel.send(KutumMsg9);
   });
@@ -341,7 +341,7 @@ client.on("ready", () => {
     .setImage("https://i.imgur.com/cMJDCj1.png")
     .setTitle("Halo Halo Boss sie respi za 15 min!??! ===> Nouver");
   /////////////////////////////funkcja///////////////////////////
-  var Nouver12 = schedule.scheduleJob("45 11 * * 4", function () {
+  var Nouver12 = schedule.schedule("45 11 * * 4", function () {
     const channel = client.channels.cache.get(ChanelId);
     channel.send(NouverMsg12);
   });
@@ -352,7 +352,7 @@ client.on("ready", () => {
     .setImage("https://i.imgur.com/Szkk0pU.png")
     .setTitle("Halo Halo Boss sie respi za 15 min!??! ===> Kzarka");
   /////////////////////////////funkcja////////////////////
-  var Kzarka11 = schedule.scheduleJob("45 15 * * 4", function () {
+  var Kzarka11 = schedule.schedule("45 15 * * 4", function () {
     const channel = client.channels.cache.get(ChanelId);
     channel.send(KzarkaMsg11);
   });
@@ -363,7 +363,7 @@ client.on("ready", () => {
     .setImage("https://i.imgur.com/umi4tP6.png")
     .setTitle("Halo Halo Boss sie respi za 15 min!??! ===> Kutum");
   ///////////////////////////funkcja//////////////////////
-  var Kutum10 = schedule.scheduleJob("45 18 * * 4", function () {
+  var Kutum10 = schedule.schedule("45 18 * * 4", function () {
     const channel = client.channels.cache.get(ChanelId);
     channel.send(KutumMsg10);
   });
@@ -374,7 +374,7 @@ client.on("ready", () => {
     .setImage("https://i.imgur.com/gPTUScx.png")
     .setTitle("Halo Halo Boss sie respi za 15 min!??! ===> Garmoth");
   /////////////////////////////funkcja////////////////////
-  var Garmoth3 = schedule.scheduleJob("00 22 * * 4", function () {
+  var Garmoth3 = schedule.schedule("00 22 * * 4", function () {
     const channel = client.channels.cache.get(ChanelId);
     channel.send(GarmothMsg3);
   });
@@ -387,7 +387,7 @@ client.on("ready", () => {
     .setImage("https://i.imgur.com/pqasFj4.png")
     .setTitle("Halo Halo Boss sie respi za 15 min!??! ===> Karada, Kzarka");
   //////////////////////funkcja////////////////////
-  var KAradaKzarka4 = schedule.scheduleJob("00 00 * * 5", function () {
+  var KAradaKzarka4 = schedule.schedule("00 00 * * 5", function () {
     const channel = client.channels.cache.get(ChanelId);
     channel.send(KAradaKzarkaMsg4);
   });
@@ -398,7 +398,7 @@ client.on("ready", () => {
     .setImage("https://i.imgur.com/cMJDCj1.png")
     .setTitle("Halo Halo Boss sie respi za 15 min!??! ===> Nouver");
   /////////////////////////////funkcja///////////////////////////
-  var Nouver13 = schedule.scheduleJob("45 01 * * 5", function () {
+  var Nouver13 = schedule.schedule("45 01 * * 5", function () {
     const channel = client.channels.cache.get(ChanelId);
     channel.send(NouverMsg13);
   });
@@ -409,7 +409,7 @@ client.on("ready", () => {
     .setImage("https://i.imgur.com/Edj0nml.png")
     .setTitle("Halo Halo Boss sie respi za 15 min!??! ===> Karada");
   ///////////////////////funkcja////////////////////
-  var Karada4 = schedule.scheduleJob("45 04 * * 5", function () {
+  var Karada4 = schedule.schedule("45 04 * * 5", function () {
     const channel = client.channels.cache.get(ChanelId);
     channel.send(KaradaMsg4);
   });
@@ -420,7 +420,7 @@ client.on("ready", () => {
     .setImage("https://i.imgur.com/umi4tP6.png")
     .setTitle("Halo Halo Boss sie respi za 15 min!??! ===> Kutum");
   ///////////////////////////funkcja//////////////////////
-  var Kutum13 = schedule.scheduleJob("45 08 * * 5", function () {
+  var Kutum13 = schedule.schedule("45 08 * * 5", function () {
     const channel = client.channels.cache.get(ChanelId);
     channel.send(KutumMsg13);
   });
@@ -431,7 +431,7 @@ client.on("ready", () => {
     .setImage("https://i.imgur.com/Edj0nml.png")
     .setTitle("Halo Halo Boss sie respi za 15 min!??! ===> Karada");
   ///////////////////////funkcja////////////////////
-  var Karada5 = schedule.scheduleJob("45 11 * * 5", function () {
+  var Karada5 = schedule.schedule("45 11 * * 5", function () {
     const channel = client.channels.cache.get(ChanelId);
     channel.send(KaradaMsg5);
   });
@@ -442,7 +442,7 @@ client.on("ready", () => {
     .setImage("https://i.imgur.com/cMJDCj1.png")
     .setTitle("Halo Halo Boss sie respi za 15 min!??! ===> Nouver");
   /////////////////////////////funkcja///////////////////////////
-  var Nouver14 = schedule.scheduleJob("45 15 * * 5", function () {
+  var Nouver14 = schedule.schedule("45 15 * * 5", function () {
     const channel = client.channels.cache.get(ChanelId);
     channel.send(NouverMsg14);
   });
@@ -453,7 +453,7 @@ client.on("ready", () => {
     .setImage("https://i.imgur.com/Szkk0pU.png")
     .setTitle("Halo Halo Boss sie respi za 15 min!??! ===> Kzarka");
   /////////////////////////////funkcja////////////////////
-  var Kzarka15 = schedule.scheduleJob("45 18 * * 5", function () {
+  var Kzarka15 = schedule.schedule("45 18 * * 5", function () {
     const channel = client.channels.cache.get(ChanelId);
     channel.send(KzarkaMsg15);
   });
@@ -464,7 +464,7 @@ client.on("ready", () => {
     .setImage("https://i.imgur.com/tE5bxmI.png")
     .setTitle("Halo Halo Boss sie respi za 15 min!??! ===> Nouver, Kutum");
   /////////////////////funkcja/////////////////////////////
-  var KzarkaKutum2 = schedule.scheduleJob("00 22 * * 5", function () {
+  var KzarkaKutum2 = schedule.schedule("00 22 * * 5", function () {
     const channel = client.channels.cache.get(ChanelId);
     channel.send(KzarkaKutumMsg2);
   });
@@ -476,7 +476,7 @@ client.on("ready", () => {
     .setImage("https://i.imgur.com/Edj0nml.png")
     .setTitle("Halo Halo Boss sie respi za 15 min!??! ===> Karada");
   ///////////////////////funkcja////////////////////
-  var Karada = schedule.scheduleJob("00 00 * * 6", function () {
+  var Karada = schedule.schedule("00 00 * * 6", function () {
     const channel = client.channels.cache.get(ChanelId);
     channel.send(KaradaMsg);
   });
@@ -487,7 +487,7 @@ client.on("ready", () => {
     .setImage("https://i.imgur.com/cmq8CNP.png")
     .setTitle("Halo Halo Boss sie respi za 15 min!??! ===> Offin");
   /////////////////////////funkcja////////////////////////////
-  var Offin = schedule.scheduleJob("45 01 * * 6", function () {
+  var Offin = schedule.schedule("45 01 * * 6", function () {
     const channel = client.channels.cache.get(ChanelId);
     channel.send(OffinMsg);
   });
@@ -498,7 +498,7 @@ client.on("ready", () => {
     .setImage("https://i.imgur.com/cMJDCj1.png")
     .setTitle("Halo Halo Boss sie respi za 15 min!??! ===> Nouver");
   /////////////////////////////funkcja///////////////////////////
-  var Nouver = schedule.scheduleJob("45 04 * * 6", function () {
+  var Nouver = schedule.schedule("45 04 * * 6", function () {
     const channel = client.channels.cache.get(ChanelId);
     channel.send(NouverMsg);
   });
@@ -509,7 +509,7 @@ client.on("ready", () => {
     .setImage("https://i.imgur.com/umi4tP6.png")
     .setTitle("Halo Halo Boss sie respi za 15 min!??! ===> Kutum");
   ///////////////////////////funkcja//////////////////////
-  var Kutum = schedule.scheduleJob("45 08 * * 6", function () {
+  var Kutum = schedule.schedule("45 08 * * 6", function () {
     const channel = client.channels.cache.get(ChanelId);
     channel.send(KutumMsg);
   });
@@ -520,7 +520,7 @@ client.on("ready", () => {
     .setImage("https://i.imgur.com/cMJDCj1.png")
     .setTitle("Halo Halo Boss sie respi za 15 min!??! ===> Nouver");
   /////////////////////////funkcja//////////////////////
-  var Nouver2 = schedule.scheduleJob("45 11 * * 6", function () {
+  var Nouver2 = schedule.schedule("45 11 * * 6", function () {
     const channel = client.channels.cache.get(ChanelId);
     channel.send(NouverMsg2);
   });
@@ -531,7 +531,7 @@ client.on("ready", () => {
     .setImage("https://i.imgur.com/QfvqMqM.png")
     .setTitle("Halo Halo Boss sie respi za 15 min!??! ===> Quint,Muraka");
   //////////////////////////funkcja///////////////////////////
-  var QuintMuraka = schedule.scheduleJob("45 15 * * 6", function () {
+  var QuintMuraka = schedule.schedule("45 15 * * 6", function () {
     const channel = client.channels.cache.get(ChanelId);
     channel.send(QuintMurakaMsg);
   });
@@ -542,7 +542,7 @@ client.on("ready", () => {
     .setImage("https://i.imgur.com/pqasFj4.png")
     .setTitle("Halo Halo Boss sie respi za 15 min!??! ===> Karada, Kzarka");
   //////////////////////funkcja////////////////////
-  var KAradaKzarka = schedule.scheduleJob("45 18 * * 6", function () {
+  var KAradaKzarka = schedule.schedule("45 18 * * 6", function () {
     const channel = client.channels.cache.get(ChanelId);
     channel.send(KAradaKzarkaMsg);
   });
@@ -556,7 +556,7 @@ client.on("ready", () => {
     .setImage("https://i.imgur.com/MAmSMTd.png")
     .setTitle("Halo Halo Boss sie respi za 15 min!??! ===> Nouver, Kutum");
   /////////////////////funkcja/////////////////////////////
-  var NouverKutum = schedule.scheduleJob("00 00 * * 7", function () {
+  var NouverKutum = schedule.schedule("00 00 * * 7", function () {
     const channel = client.channels.cache.get(ChanelId);
     channel.send(NouverKutumMsg);
   });
@@ -567,7 +567,7 @@ client.on("ready", () => {
     .setImage("https://i.imgur.com/Szkk0pU.png")
     .setTitle("Halo Halo Boss sie respi za 15 min!??! ===> Kzarka");
   /////////////////////////////funkcja////////////////////
-  var Kzarka = schedule.scheduleJob("45 01 * * 7", function () {
+  var Kzarka = schedule.schedule("45 01 * * 7", function () {
     const channel = client.channels.cache.get(ChanelId);
     channel.send(KzarkaMsg);
   });
@@ -578,7 +578,7 @@ client.on("ready", () => {
     .setImage("https://i.imgur.com/umi4tP6.png")
     .setTitle("Halo Halo Boss sie respi za 15 min!??! ===> Kutum");
   /////////////////////////////funkcja////////////////////
-  var Kutum2 = schedule.scheduleJob("45 04 * * 7", function () {
+  var Kutum2 = schedule.schedule("45 04 * * 7", function () {
     const channel = client.channels.cache.get(ChanelId);
     channel.send(KutumMsg2);
   });
@@ -589,7 +589,7 @@ client.on("ready", () => {
     .setImage("https://i.imgur.com/cMJDCj1.png")
     .setTitle("Halo Halo Boss sie respi za 15 min!??! ===> Nouver");
   /////////////////////////funkcja//////////////////////
-  var Nouver3 = schedule.scheduleJob("45 08 * * 7", function () {
+  var Nouver3 = schedule.schedule("45 08 * * 7", function () {
     const channel = client.channels.cache.get(ChanelId);
     channel.send(NouverMsg3);
   });
@@ -600,7 +600,7 @@ client.on("ready", () => {
     .setImage("https://i.imgur.com/Szkk0pU.png")
     .setTitle("Halo Halo Boss sie respi za 15 min!??! ===> Kzarka");
   /////////////////////////////funkcja////////////////////
-  var Kzarka2 = schedule.scheduleJob("45 11 * * 7", function () {
+  var Kzarka2 = schedule.schedule("45 11 * * 7", function () {
     const channel = client.channels.cache.get(ChanelId);
     channel.send(KzarkaMsg2);
   });
@@ -611,7 +611,7 @@ client.on("ready", () => {
     .setImage("https://i.imgur.com/C3X1tu9.png")
     .setTitle("Halo Halo Boss sie respi za 15 min!??! ===> Vell");
   /////////////////////////////funkcja////////////////////
-  var Vell = schedule.scheduleJob("45 15 * * 7", function () {
+  var Vell = schedule.schedule("45 15 * * 7", function () {
     const channel = client.channels.cache.get(ChanelId);
     channel.send(VellMsg);
   });
@@ -622,7 +622,7 @@ client.on("ready", () => {
     .setImage("https://i.imgur.com/gPTUScx.png")
     .setTitle("Halo Halo Boss sie respi za 15 min!??! ===> Garmoth");
   /////////////////////////////funkcja////////////////////
-  var Garmoth = schedule.scheduleJob("45 18 * * 7", function () {
+  var Garmoth = schedule.schedule("45 18 * * 7", function () {
     const channel = client.channels.cache.get(ChanelId);
     channel.send(GarmothMsg);
   });
@@ -633,7 +633,7 @@ client.on("ready", () => {
     .setImage("https://i.imgur.com/gPTUScx.png")
     .setTitle("Halo Halo Boss sie respi za 15 min!??! ===> Kzarka, Nouver");
   /////////////////////////////funkcja////////////////////
-  var KzarkaNouver = schedule.scheduleJob("00 22 * * 7", function () {
+  var KzarkaNouver = schedule.schedule("00 22 * * 7", function () {
     const channel = client.channels.cache.get(ChanelId);
     channel.send(KzarkaNouverMsg2);
   });
