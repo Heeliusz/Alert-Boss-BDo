@@ -1,6 +1,8 @@
 const { prefix, Token, ChanelId, RoleAdm, guildID } = require("./confing.json");
 
+
 var schedule = require("node-schedule");
+
 const { Client, MessageEmbed, User, Message, CategoryChannel, Channel } = require("discord.js");
 const client = new Client({ partials: ["MESSAGE", "REACTION"] });
 let jest = false;
@@ -646,7 +648,7 @@ client.on("ready", () => {
 client.on("message", async (message) => {
   if (message.author.bot) {
     message.delete({
-      timeout: 800000,
+      timeout: 5000,
     });
     return;
   } else if (message.channel.id == ChanelId) {
